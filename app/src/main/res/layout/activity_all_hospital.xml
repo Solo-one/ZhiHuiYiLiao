@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:myApp="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.zhihuiyiliao.visit.AllHospitalActivity">
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_style"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="8dp"
+            android:src="@drawable/leftbackicon_titlebar_normal"
+            />
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="所有医院"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+       <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#d2a9a9a9" />
+    </RelativeLayout>
+
+    <TableLayout
+        android:id="@+id/top_below"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1"
+        android:shrinkColumns="0,1"
+        >
+        <TableRow>
+            <LinearLayout
+                android:id="@+id/allCity"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ico_arrow_normal"
+                    android:drawablePadding="4dp"
+                    android:text="全城"
+                    android:textSize="14sp"
+                    android:textColor="#787777"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/sort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/ico_arrow_normal"
+                    android:drawablePadding="4dp"
+                    android:text="智能排序"
+                    android:textSize="14sp"
+                    android:textColor="#787777"
+                    android:paddingTop="7dp"
+                    android:paddingBottom="7dp"
+                    />
+            </LinearLayout>
+        </TableRow>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#a0bebcbc" />
+    </TableLayout>
+
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/pull_lv"
+        android:layout_below="@id/top_below"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        myApp:ptrHeaderBackground="#a0bebcbc"
+        android:divider="@null"
+        myApp:ptrDrawable="@drawable/indicator_arrow"
+        myApp:ptrAnimationStyle="flip"/>
+
+</RelativeLayout>

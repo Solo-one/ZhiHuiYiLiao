@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgexit">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textSize="18sp"
+        android:text="退出登录"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:background="#e6bcbbbb"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:background="@drawable/bg6"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="取消"/>
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/sure"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg7"
+            android:textSize="16sp"
+            android:text="确定"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.zhihuiyiliao.visit.AllHospitalActivity">
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_style"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="8dp"
+            android:src="@drawable/leftbackicon_titlebar_normal"
+            />
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="医院主页"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:text="收藏"
+            android:textColor="#5693ef"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#d2a9a9a9" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/myscrollview"
+        android:layout_below="@id/top"
+        android:background="#edecec"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <RelativeLayout
+                android:background="#FFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingTop="8dp">
+                <com.example.asus.zhihuiyiliao.SelfWidget.MarqueeTextView
+                    android:id="@+id/name"
+                    android:layout_toLeftOf="@+id/luxian"
+                    android:layout_marginRight="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="医院名称"
+                    android:textSize="18sp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:focusableInTouchMode="true"
+                    android:focusable="true"
+                    />
+               <!-- <TextView
+                    android:id="@+id/level"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_alignBaseline="@id/name"
+                    android:layout_toRightOf="@id/name"
+                    android:layout_toLeftOf="@+id/luxian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="级别"/>-->
+                <com.example.asus.zhihuiyiliao.SelfWidget.MarqueeTextView
+                    android:id="@+id/address"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:layout_below="@id/name"
+                    android:layout_toLeftOf="@+id/luxian"
+                    android:layout_marginRight="6dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="医院地址"
+                    android:focusable="true"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    />
+
+                <TextView
+                    android:id="@+id/luxian"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="wrap_content"
+                    android:drawablePadding="6dp"
+                    android:drawableTop="@drawable/ico_map"
+                    android:layout_height="wrap_content"
+                    android:textColor="#5693ef"
+                    android:text="查看路线"/>
+
+
+                <TextView
+                    android:id="@+id/gobus"
+                    android:layout_below="@id/address"
+                    android:paddingBottom="8dp"
+                    android:layout_marginRight="6dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="4"
+                    android:ellipsize="end"
+                    android:text="乘车路线"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="22dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+
+            <RelativeLayout
+                android:background="#FFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/msg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="医院信息"
+                    android:padding="10dp"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_below="@id/msg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    style="@style/mine_style_color"/>
+
+                <LinearLayout
+                    android:id="@+id/web"
+                    android:orientation="horizontal"
+                    android:layout_below="@id/msg1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/msg2"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="8dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ico_hospital"
+                        android:drawablePadding="4dp"
+                        android:text="医院介绍"/>
+                    <TextView
+                        android:id="@+id/msg3"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="8dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ico_complex"
+                        android:drawablePadding="4dp"
+                        android:text="科室分布"/>
+
+                    <TextView
+                        android:id="@+id/msg4"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="8dp"
+                        android:layout_height="wrap_content"
+                        android:drawableTop="@drawable/ico_tips"
+                        android:drawablePadding="4dp"
+                        android:text="就诊贴士"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="22dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+
+            <RelativeLayout
+                android:background="#FFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="医院服务"
+                    android:padding="10dp"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_below="@id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    style="@style/mine_style_color"/>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_below="@id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <RelativeLayout
+                        android:id="@+id/item1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/ico_binding" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/img1"
+                            android:text="咨询医生" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/img1"
+                            android:paddingBottom="3dp"
+                            android:text="绑定您的主治医生，享受医生随访服务"
+                            android:textColor="#b6b5b5"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        style="@style/mine_style_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/item2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/ico_appointment" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/img2"
+                            android:text="预约挂号" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/img2"
+                            android:paddingBottom="3dp"
+                            android:text="提前预约，无需排队"
+                            android:textColor="#b6b5b5"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        style="@style/mine_style_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/item3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/ico_lineup" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/img3"
+                            android:text="排队信息" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/img3"
+                            android:paddingBottom="3dp"
+                            android:text="查看排队情况"
+                            android:textColor="#b6b5b5"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        style="@style/mine_style_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/item4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/ico_pay" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/img4"
+                            android:text="门诊缴费" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/img4"
+                            android:paddingBottom="3dp"
+                            android:text="在线支付药费，检验检测费用"
+                            android:textColor="#b6b5b5"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        style="@style/mine_style_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/item5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/ico_check" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/img5"
+                            android:text="检验检查" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/img5"
+                            android:paddingBottom="3dp"
+                            android:text="手机查看报告单"
+                            android:textColor="#b6b5b5"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        style="@style/mine_style_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/item6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/ico_electronic_none" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/img6"
+                            android:text="电子病历" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/img6"
+                            android:paddingBottom="3dp"
+                            android:text="手机查看报告单"
+                            android:textColor="#b6b5b5"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_marginLeft="6dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        style="@style/mine_style_color"/>
+
+                    <RelativeLayout
+                        android:id="@+id/item7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp">
+
+                        <ImageView
+                            android:id="@+id/img7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="18dp"
+                            android:src="@drawable/ico_hospitalization_none" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@id/img7"
+                            android:text="住院押金" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_toRightOf="@id/img7"
+                            android:paddingBottom="3dp"
+                            android:text="手机补缴住院押金"
+                            android:textColor="#b6b5b5"
+                            android:textSize="12sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

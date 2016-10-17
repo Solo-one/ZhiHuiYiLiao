@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="10dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_toLeftOf="@+id/albums"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题"/>
+        <TextView
+            android:id="@+id/imtro"
+            android:layout_below="@id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题"/>
+        <TextView
+            android:id="@+id/ingredients"
+            android:layout_below="@id/imtro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="食材"/>
+        <TextView
+            android:id="@+id/burden"
+            android:layout_below="@id/ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="配料"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/albums"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="3dp"
+        android:scaleType="fitXY"
+        android:layout_width="100dp"
+        android:layout_height="60dp" />
+</RelativeLayout>

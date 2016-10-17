@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_style"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="8dp"
+            android:src="@drawable/leftbackicon_titlebar_normal"
+            />
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="实名资料"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:text="保存"
+            android:textColor="#5693ef"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/nav_scan_normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#d2a9a9a9" />
+    </RelativeLayout>
+
+    <com.example.asus.zhihuiyiliao.SelfWidget.MyScrollView
+        android:id="@+id/myscrollview"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#edecec">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <RelativeLayout
+                android:id="@+id/item1"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/mine_style_1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="真实姓名"
+                    android:layout_centerVertical="true"
+                    android:textColor="#545454"
+                    />
+
+                <EditText
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:hint="请输入姓名"
+                    android:textSize="14sp"
+                    android:textCursorDrawable="@drawable/mycursor"
+                    android:textColorHint="#fca1a0a0"
+                    android:gravity="center_vertical"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/mine_style_1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别"
+                    android:layout_centerVertical="true"
+                    android:textColor="#545454"
+                    />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/ico_page"
+                    android:text="请选择"
+                    android:textColor="#545454"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+
+            <RelativeLayout
+                android:id="@+id/item3"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/mine_style_1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生日期"
+                    android:layout_centerVertical="true"
+                    android:textColor="#545454"
+                    />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/ico_page"
+                    android:text="请选择"
+                    android:textColor="#545454"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+
+
+            <RelativeLayout
+                android:id="@+id/item4"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/mine_style_1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="证件类型"
+                    android:layout_centerVertical="true"
+                    android:textColor="#545454"
+                    />
+
+                <TextView
+                    android:id="@+id/card"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/ico_page"
+                    android:text="请选择"
+                    android:textColor="#545454"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <RelativeLayout
+                android:id="@+id/item5"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/mine_style_1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="证件号码"
+                    android:layout_centerVertical="true"
+                    android:textColor="#545454"
+                    />
+
+                <EditText
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@null"
+                    android:hint="请输入证件号码"
+                    android:textSize="14sp"
+                    android:numeric="integer"
+                    android:textCursorDrawable="@drawable/mycursor"
+                    android:textColorHint="#fca1a0a0"
+                    android:gravity="center_vertical"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <RelativeLayout
+                android:id="@+id/item6"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/mine_style_1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="居住城市（选题）"
+                    android:layout_centerVertical="true"
+                    android:textColor="#545454"
+                    />
+
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="3dp"
+                    android:gravity="center_vertical"
+                    android:drawableRight="@drawable/ico_page"
+                    android:text="请选择"
+                    android:textColor="#545454"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+
+            <RelativeLayout
+                android:id="@+id/item7"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                style="@style/mine_style_1"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical">
+                <TextView
+                    android:id="@+id/expand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="我要添加就诊卡"
+                    android:textSize="16sp"
+                    android:textColor="#10a5f5"
+                    android:drawableRight="@drawable/mine_icon_add"
+                    android:drawablePadding="3dp"
+                    />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                style="@style/mine_style_color"/>
+
+            <LinearLayout
+                android:id="@+id/expand_oo"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:id="@+id/item8"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/mine_style_1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="医院"
+                        android:layout_centerVertical="true"
+                        android:textColor="#545454"
+                        />
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/ico_page"
+                        android:text="请选择"
+                        android:textColor="#545454"
+                        android:textSize="14sp"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    style="@style/mine_style_color"/>
+
+                <RelativeLayout
+                    android:id="@+id/item9"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/mine_style_1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="就诊卡类型"
+                        android:layout_centerVertical="true"
+                        android:textColor="#545454"
+                        />
+
+                    <TextView
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="3dp"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/ico_page"
+                        android:text="请选择"
+                        android:textColor="#545454"
+                        android:textSize="14sp"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    style="@style/mine_style_color"/>
+
+                <RelativeLayout
+                    android:id="@+id/item10"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    style="@style/mine_style_1"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="卡号"
+                        android:numeric="integer"
+                        android:layout_centerVertical="true"
+                        android:textColor="#545454"
+                        />
+
+                    <EditText
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@null"
+                        android:hint="请输入卡号"
+                        android:textSize="14sp"
+                        android:textCursorDrawable="@drawable/mycursor"
+                        android:textColorHint="#fca1a0a0"
+                        android:gravity="center_vertical"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    style="@style/mine_style_color"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp" />
+
+        </LinearLayout>
+
+    </com.example.asus.zhihuiyiliao.SelfWidget.MyScrollView>
+
+
+</RelativeLayout>

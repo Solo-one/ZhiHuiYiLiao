@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.zhihuiyiliao.consulation.NewsDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        style="@style/top_style"
+        android:layout_width="match_parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_centerVertical="true"
+            android:paddingLeft="8dp"
+            android:src="@drawable/leftbackicon_titlebar_normal"
+            />
+
+        <TextView
+            android:id="@+id/topText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="资讯详情"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/newsdetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="16dp"
+            android:drawablePadding="3dp"
+            android:gravity="center_vertical"
+            android:text="收藏"
+            android:textColor="#5693ef"
+            android:textSize="16sp" />
+
+
+        <ImageView
+            android:id="@+id/scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/nav_scan_normal"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#d2a9a9a9" />
+    </RelativeLayout>
+
+    <com.example.asus.zhihuiyiliao.SelfWidget.MyScrollView
+        android:id="@+id/myscrollview"
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:focusable="true"
+                android:textStyle="bold"
+                android:focusableInTouchMode="true"
+                android:textColor="#393939"
+                android:text="标题"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="6dp">
+                <TextView
+                    android:id="@+id/liulan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="6dp"
+                    android:text="浏览数"/>
+
+                <TextView
+                    android:id="@+id/comment"
+                    android:layout_toRightOf="@id/liulan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="评论数"/>
+
+            </RelativeLayout>
+
+          <!--  <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:text="资讯简介"/>-->
+
+            <WebView
+                android:id="@+id/detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </WebView>
+        </LinearLayout>
+    </com.example.asus.zhihuiyiliao.SelfWidget.MyScrollView>
+
+</RelativeLayout>

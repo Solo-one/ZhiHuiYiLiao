@@ -1,0 +1,283 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edecec"
+    tools:context="com.example.asus.zhihuiyiliao.guide.MineFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="8dp"
+            android:background="#fff">
+
+            <com.example.asus.zhihuiyiliao.SelfWidget.CircleImageView
+                android:id="@+id/headerPIC"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="6dp"
+                android:layout_width="63dp"
+                android:layout_height="63dp"
+                />
+
+            <TextView
+                android:id="@+id/item1"
+                android:layout_toRightOf="@id/headerPIC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/mine_style"
+                android:drawableRight="@drawable/ico_page"
+                android:layout_centerVertical="true"
+                android:text="立即登录" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TableLayout
+            android:background="#FFF"
+            android:paddingTop="8dp"
+            android:paddingBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+           <TableRow>
+               <LinearLayout
+                   android:id="@+id/favoriteHos"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:orientation="vertical"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:id="@+id/num1"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:text="0"/>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:text="收藏的医院"/>
+               </LinearLayout>
+
+               <LinearLayout
+                   android:id="@+id/favoriteNews"
+                   android:layout_weight="1"
+                   android:layout_width="0dp"
+                   android:orientation="vertical"
+                   android:layout_height="wrap_content">
+                   <TextView
+                       android:id="@+id/num2"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:text="0"/>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:gravity="center"
+                       android:text="收藏的资讯"/>
+               </LinearLayout>
+
+           </TableRow>
+        </TableLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:id="@+id/item2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/ico_shebao_1"
+            android:drawableRight="@drawable/ico_page"
+            android:text="我的社保" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:id="@+id/item3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/mine_icon_patient"
+            android:drawableRight="@drawable/ico_page"
+            android:text="就诊人管理"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:id="@+id/item4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/mine_icon_doctor"
+            android:drawableRight="@drawable/ico_page"
+            android:text="我的医生"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+
+        <TextView
+            android:id="@+id/item5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/mine_icon_registered"
+            android:drawableRight="@drawable/ico_page"
+            android:text="挂号订单" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:id="@+id/item6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/mine_icon_check"
+            android:drawableRight="@drawable/ico_page"
+            android:text="检验检测报告"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:id="@+id/item7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/mine_icon_history"
+            android:drawableRight="@drawable/ico_page"
+            android:text="电子病历"
+           />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:id="@+id/item8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/mine_icon_recipe"
+            android:drawableRight="@drawable/ico_page"
+            android:text="住院清单"
+           />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+
+        <TextView
+            android:id="@+id/item9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/mine_style"
+            android:drawableLeft="@drawable/mine_icon_seting"
+            android:drawableRight="@drawable/ico_page"
+            android:text="设置"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+
+        <TextView
+            android:id="@+id/item10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFF"
+            android:gravity="center"
+            android:textColor="#333"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="退出登录"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            style="@style/mine_style_color"/>
+
+    </LinearLayout>
+
+</ScrollView>
